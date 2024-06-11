@@ -10,6 +10,7 @@ body {font-family: Arial;}
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #f1f1f1;
+  text-align: right;
 }
 
 /* Style the buttons inside the tab */
@@ -49,9 +50,9 @@ body {font-family: Arial;}
 <p>Click on the buttons inside the tabbed menu:</p>
 
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+  <button class="tablinks" onclick="openTab(event, 'London')">London</button>
+  <button class="tablinks" onclick="openTab(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openTab(event, 'Tokyo')">Tokyo</button>
 </div>
 
 <div id="London" class="tabcontent">
@@ -70,7 +71,7 @@ body {font-family: Arial;}
 </div>
 
 <script>
-function openCity(evt, cityName) {
+function openTab(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
