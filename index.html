@@ -22,7 +22,7 @@ body, html {
   cursor: pointer;
   padding: 14px 16px;
   font-size: 17px;
-  width: 25%;
+  width: 20%;
 }
 
 .tablink:hover {
@@ -213,6 +213,7 @@ body, html {
 <button class="tablink" onclick="openPage('Home', this)" id="defaultOpen">Home</button>
 <button class="tablink" onclick="openPage('Projects', this)" >Projects</button>
 <button class="tablink" onclick="openPage('Awards', this)">Awards</button>
+<button class="tablink" onclick="openPage('Activities', this)">Activities</button>
 <button class="tablink" onclick="openPage('Contact', this)" id="contact">Contact</button>
 
 <!-- home page -->
@@ -242,11 +243,11 @@ body, html {
 <div id="Projects" class="tabcontent">
   <h3>News</h3>
   <p>Some news this fine day!</p> 
-  </div>
+</div>
 
-  <!-- award page -->
-  <div id="Awards" class="tabcontent">
-    <h1>Awards</h1>
+<!-- award page -->
+<div id="Awards" class="tabcontent">
+  <h1>Awards</h1>
     <!-- Slideshow container -->
   <div class="slideshow-container">
 
@@ -297,6 +298,12 @@ body, html {
     <span class="dot" onclick="currentSlide(4)"></span>
   </div>
 </div>
+
+<!-- activities page -->
+<div id="Activities" class="tabcontent">
+  <h3>News</h3>
+  <p>Some news this fine day!</p> 
+  </div>
 
 <!-- contact page -->
 <div id="Contact" class="tabcontent">
