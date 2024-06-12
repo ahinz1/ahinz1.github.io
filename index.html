@@ -56,17 +56,13 @@ body, html {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-}
-
-.button1 {
   background-color: #0444dc; 
-  color: white; 
   border: 2px solid #0444dc;
 }
 
-.button1:hover {
+.button:hover {
   background-color: white;
-  color: black;
+  color: #0444dc;
 }
 
 .button1 {background-color: #0444dc;}
@@ -108,8 +104,7 @@ body, html {
         <br> <br>
         I look forward to connecting with you and exploring new possibilities together!
         </p>
-    
-          <button class="button button1" onclick="openPage('Contact', this)">Hire Me!</button>
+        <button class="button" onclick="openButton('Contact', this)">Hire Me!</button>
     </div>
 
       <img src="alizea-hand.jpg" alt="Alizea's Photo" width="500" height="600" style="float:right"> 
@@ -148,6 +143,15 @@ function openPage(pageName,elmnt) {
   }
   document.getElementById(pageName).style.display = "block";
   elmnt.style.backgroundColor = '#555';
+  
+}
+
+function openButton(pageName,elmnt) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  document.getElementById(pageName).style.display = "block";
+  tabcontent[-1].style.backgroundColor = '#555'; //change contact to gray
+  elmnt.style.backgroundColor = "#0444dc"; //change button back to blue
 }
 
 // Get the element with id="defaultOpen" and click on it
