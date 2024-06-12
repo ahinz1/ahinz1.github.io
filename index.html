@@ -113,12 +113,21 @@ body, html {
 }
 
 /* Caption text */
-.text {
+.award_text {
   color: #f2f2f2;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+.awarded_text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 30px;
   width: 100%;
   text-align: center;
 }
@@ -137,7 +146,15 @@ body, html {
   opacity: .5;
 }
 
-.mySlides:hover .text {
+.mySlides:hover .award_text {
+  opacity: 1;
+}
+
+.mySlides:hover .awarded_text {
+  opacity: 1;
+}
+
+.mySlides:hover .award_title_text {
   opacity: 1;
 }
 
@@ -224,7 +241,7 @@ body, html {
 
   <!-- award page -->
   <div id="Awards" class="tabcontent">
-    <h3>Awards</h3>
+    <h1>Awards</h1>
     <!-- Slideshow container -->
   <div class="slideshow-container">
 
@@ -233,26 +250,32 @@ body, html {
       <div class="numbertext">1 / 4</div>
       <img src="gold_award.jpg" style="width:50%" class="center">
       <div class="award_title_text">Gold Award</div>
-      <div class="text">Awarded: May 2020</div>
+      <div class="awarded_text">Awarded: May 2020</div>
+      <div class="award_text">The Girl Scout Gold Award is the highest and most prestigious award in Girl Scouting, comparable to the Boy Scouts of America's Eagle Scout merit. Girls who obtain their Gold Award transform an idea and vision for change into an actionable plan with measureable, sustainable, and far-reaching results.</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">2 / 4</div>
       <img src="servant_leadership.png" style="width:50%" class="center">
       <div class="award_title_text">Servant Leadership Award</div>
-      <div class="text">Awarded: May 2024</div>
+      <div class="awarded_text">Awarded: May 2024</div>
+      <div class="award_text">Awarded by the University of San Diego to a select group of students that have shown exemplary service and leadership within University Ministry.</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">3 / 4</div>
       <img src="cs.png" style="width:85%" class="center">
       <div class="award_title_text">Computer Science Departmental Honors</div>
+      <div class="awarded_text">Awarded: May 2024</div>
+      <div class="award_text">Awarded by the University of San Diego to a select group of students that maintain above a 3.5 GPA in their upper-division major courses.</div>
     </div>
 
     <div class="mySlides fade">
       <div class="numbertext">4 / 4</div>
       <img src="math.png" style="width:85%" class="center">
       <div class="award_title_text">Mathematics Departmental Honors</div>
+      <div class="awarded_text">Awarded: May 2024</div>
+      <div class="award_text">Awarded by the University of San Diego to a select group of students that maintain above a 3.5 GPA in their upper-division major courses.</div>
     </div>
 
     <!-- Next and previous buttons -->
