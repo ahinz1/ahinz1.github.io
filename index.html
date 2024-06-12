@@ -10,6 +10,7 @@
 body, html {
   margin: 0;
   font-family: Arial;
+  min-height: 100%;
 }
 
 /* Style tab links */
@@ -34,7 +35,7 @@ body, html {
 .tabcontent {
   color: #f2f2f2;
   display: none;
-  padding: 80px 20px;
+  padding: 50px 20px;
   height: 100%;
 }
 
@@ -274,7 +275,7 @@ h1 {
 /* Add a dark background color to the active button */
 .btn.active {
   background-color: #666;
-   color: white;
+  color: white;
 }
 /* Responsive layout - makes a three column-layout instead of four columns */
 @media screen and (max-width: 1200px) {
@@ -631,6 +632,7 @@ function w3RemoveClass(element, name) {
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btn");
+print(btns.length)
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
     var current = document.getElementsByClassName("active");
