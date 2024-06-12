@@ -234,8 +234,8 @@ h1 {
 /* Create three equal columns that floats next to each other */
 .portfolio_column {
   float: left;
-  flex: 33.33%;
-  width: 33.33%;
+  flex: 25%;
+  width: 25%;
   display: none; /* Hide columns by default */
 }
 
@@ -276,6 +276,14 @@ h1 {
   background-color: #666;
    color: white;
 }
+/* Responsive layout - makes a three column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .portfolio_column {
+    flex: 33.33%;
+    max-width: 33.33%;
+  }
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .portfolio_column {
