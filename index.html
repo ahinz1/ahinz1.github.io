@@ -14,7 +14,6 @@ body, html {
   font-family: Arial;
   background-color: #555;
 }
-
 /* Style tab links */
 .tablink {
   background-color: #0444dc;
@@ -41,11 +40,20 @@ body, html {
   height: 100%;
 }
 
-.row {
+#Home {background-color: #555;}
+#Projects {background-color: #555;}
+#Contact {background-color: #555;}
+#Awards {background-color: #555;}
+#Activities {background-color: #555;}
+</style>
+
+<!--Style for Home Page-->
+<style>
+.home_row {
   display: flex;
 }
 
-.column {
+.home_column {
   flex: 50%;
 }
 .button {
@@ -69,12 +77,13 @@ body, html {
 }
 
 .button1 {background-color: #0444dc;}
-
-#Home {background-color: #555;}
-#Projects {background-color: #555;}
-#Contact {background-color: #555;}
-#Awards {background-color: #555;}
-#Activities {background-color: #555;}
+/* Responsive layout - makes a two column layout one */
+@media screen and (max-width: 1200px) {
+  .home_column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
 </style>
 
 <!--Style for Awards Page-->
@@ -371,8 +380,8 @@ input[type=submit]:hover {
 
 <!-- home page -->
 <div id="Home" class="tabcontent" style="height:100%">
-  <div class="row">
-    <div style="padding:16px">
+  <div class="home_row">
+    <div class= "home_column" style="padding:16px">
       <h2>HELLO, I'M</h2>
       <h1>Alizea Hinz</h1>
       <p>
@@ -386,9 +395,9 @@ input[type=submit]:hover {
         </p>
         <button class="button" onclick="openPage('Contact', this)">Connect With Me!</button>
     </div>
-
+    <div class="home_column">
       <img src="/photos/alizea-hand.jpg" alt="Alizea's Photo" width="40%" height="20%" style="float:right;padding:20px"> 
-
+    </div>
   </div>
 </div>
 
