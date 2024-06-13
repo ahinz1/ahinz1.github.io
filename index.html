@@ -277,6 +277,25 @@ h1 {
   border:2px solid #ffffff;
 }
 
+.content.flipped {
+transform: rotateY( 180deg );
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+.content-front, .content-back {
+position: absolute;
+width: 100%;
+height: 100%;
+padding: 25px;
+backface-visibility: hidden;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.content-back {
+transform: rotateY(180deg);
+}
 /* The "show" class is added to the filtered elements */
 .show {
   display: block;
@@ -496,9 +515,13 @@ input[type=submit]:hover {
   <div class="portfolio_row">
     <div class="portfolio_column volunteering leadership">
       <div class="content">
-        <img src="/photos/search.jpg" alt="Search Retreat" style="width:100%">
-        <h4>Search Retreat Director</h4>
-        <p>Lorem ipsum dolor..</p>
+        <div class="content-front">
+          <img src="/photos/search.jpg" alt="Search Retreat" style="width:100%">
+          <h4>Search Retreat Director</h4>
+        </div>
+        <div class="content-back">
+          <p>Lorem ipsum dolor..</p>
+        </div>
       </div>
     </div>
     <div class="portfolio_column volunteering leadership">
@@ -733,6 +756,11 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
+
+$('.card').click(function(e){
+    e.preventDefault();
+    $(this).toggleClass('flipped');
+})
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
