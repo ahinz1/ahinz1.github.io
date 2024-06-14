@@ -90,6 +90,74 @@ body, html {
 }
 </style>
 
+<!--Style for Projects Page-->
+<style>
+.project_row {
+  margin: 8px -16px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create three equal columns that floats next to each other */
+.project_column {
+  float: center;
+  flex: 90%;
+  width: 90%;
+  display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.project_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.project_content {
+  background-color: #666;
+  border:2px solid #666;
+  perspective: 1000px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.6);
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.chip {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 16px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.chip img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+/* Add a grey background color on mouse-over */
+.chip:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.chip.active {
+  background-color: #666;
+  color: white;
+}
+</style>
+
 <!--Style for Awards Page-->
 <style>
 /* Slideshow container */
@@ -230,17 +298,6 @@ body, html {
 
 <!--Style for Activities Page-->
 <style>
-/* Center website 
-.main {
-  max-width: 1000px;
-  margin: auto;
-}
-
-h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-*/
 .portfolio_row {
   margin: 8px -16px;
   display: flex;
@@ -355,6 +412,7 @@ h1 {
   background-color: #666;
   color: white;
 }
+
 /* Responsive layout - makes a three column-layout instead of four columns */
 @media screen and (max-width: 1200px) {
   .portfolio_column {
@@ -465,7 +523,26 @@ input[type=submit]:hover {
 <!-- project page -->
 <div id="Projects" class="tabcontent">
   <h2>PROJECTS</h2>
-  <p>Some news this fine day!</p> 
+  <div id="myBtnContainer">
+    <button class="chip active" onclick="filterSelection('all')"> Show all</button>
+    <button class="chip" onclick="filterSelection('volunteering')"> Volunteering</button>
+    <button class="chip" onclick="filterSelection('hs')"> Honor Societies</button>
+    <button class="chip" onclick="filterSelection('leadership')"> Leadership</button>
+    <button class="chip" onclick="filterSelection('pe')"> Professional Experience</button>
+    <button class="chip" onclick="filterSelection('clubs')"> Clubs</button>
+  </div>
+
+  <!-- Project Rows -->
+  <div class="project_row">
+    <div class="project_column volunteering leadership">
+      <div class="project_content">
+        <h1>Battleship</h1>
+        <p>In my Object Oriented Programming class, we had to complete a final project, the topic being of our team’s choosing. My group implemented a version of Battleship using Python and GitHub on Visual Studio Code. Our game allowed a user to play with a smart computer, or to play against a friend in person. Additionally, it allowed users to let the program randomly place the ships on the board for them, and would inform the user when their ship was hit or sunk. I was in charge of writing all of the placing ship functionalities (including random ship placement), creating the game introduction and allowing the user to choose their preference for the game, and creating the end game (as well as repeat game functionality). Additionally, I implemented a feature that created a delay after a hit is successfully made to allow the current user to see whether the hit was successful. Throughout the process, I assisted in implementing the smart computer player and helped with overall debugging, condensing, and documentation as well as GUI implementation and updating our UML diagrams. For this project we utilized an Agile Backlog to keep track of our progress and we used a Kanban Board to keep track of individual progress on our team. Throughout this process, I learned the importance of communication within the team. During the course of the project, it was not feasible for us to convene every time we needed to work on it due to its size, thus every team member needed to adequately explain what progress they made to ensure that no work was duplicated and that other members could work on corresponding attributes without the need to wait until we gathered again.</p>
+        <div class="chip">Python</div>
+      </div>
+    </div>
+  <!-- END ROWS -->
+  </div>
 </div>
 
 <!-- award page -->
